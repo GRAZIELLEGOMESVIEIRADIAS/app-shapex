@@ -24,7 +24,7 @@ export default function Footer() {
             {/* Social Links */}
             <div className="flex gap-4">
               {[
-                { icon: Instagram, href: "#" },
+                { icon: Instagram, href: "https://www.instagram.com/shapex_ia/" },
                 { icon: Twitter, href: "#" },
                 { icon: Youtube, href: "#" },
                 { icon: Mail, href: "#" },
@@ -32,6 +32,8 @@ export default function Footer() {
                 <a
                   key={index}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 rounded-lg bg-gray-900 border border-gray-800 flex items-center justify-center hover:border-neon-cyan hover:text-neon-cyan transition-all duration-300 hover:scale-110"
                 >
                   <social.icon className="w-5 h-5" />

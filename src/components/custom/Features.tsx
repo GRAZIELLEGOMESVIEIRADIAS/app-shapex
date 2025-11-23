@@ -2,6 +2,7 @@
 
 import { Scan, Dumbbell, TrendingUp, MessageCircle, Users, BarChart3 } from "lucide-react";
 import { FEATURES } from "@/lib/constants";
+import Link from "next/link";
 
 const iconMap = {
   Scan,
@@ -36,13 +37,12 @@ export default function Features() {
             const Icon = iconMap[feature.icon as keyof typeof iconMap];
             
             return (
-              <div
+              <Link
+                href="/saiba-mais"
                 key={index}
-                className="group p-8 rounded-2xl bg-gray-900/30 border border-gray-800 backdrop-blur-sm hover:border-neon-cyan/50 hover:bg-gray-900/50 transition-all duration-300 hover:scale-105 hover:shadow-neon-cyan"
+                className="group block p-8 rounded-2xl bg-gray-900/30 border border-gray-800 backdrop-blur-sm hover:border-neon-cyan/50 hover:bg-gray-900/50 transition-all duration-300 hover:scale-105 hover:shadow-neon-cyan animate-slide-up"
                 style={{
-                  animation: "slide-up 0.6s ease-out forwards",
                   animationDelay: `${index * 0.1}s`,
-                  opacity: 0,
                 }}
               >
                 {/* Icon */}
@@ -63,7 +63,7 @@ export default function Features() {
                   <span className="text-sm font-bold">Saiba mais</span>
                   <div className="w-4 h-0.5 bg-neon-cyan group-hover:w-8 transition-all duration-300" />
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>
